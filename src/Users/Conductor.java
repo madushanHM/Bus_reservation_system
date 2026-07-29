@@ -1,4 +1,4 @@
-package models;
+package Users;
 
 public class Conductor extends User {
     private int conductorId;

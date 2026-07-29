@@ -1,7 +1,7 @@
 package demo;
 
 import datastructures.CustomLinkedList;
-import models.Passenger;
+import Users.Passenger;
 
 public class Member1_Demo {
     public static void main(String[] args) {
