@@ -8,9 +8,13 @@ public class CustomHashSet<T> {
         table = new CustomHashTable<>();
     }
 
+    public CustomHashSet(int capacity) {
+        table = new CustomHashTable<>(capacity);
+    }
+
     public boolean add(T element) {
         if (table.containsKey(element)) {
-            return false;
+            return false; // Duplicate detected!
         }
         table.put(element, Boolean.TRUE);
         return true;
@@ -26,5 +30,9 @@ public class CustomHashSet<T> {
 
     public int size() {
         return table.getSize();
+    }
+
+    public void display() {
+        table.printBucketDistribution();
     }
 }
