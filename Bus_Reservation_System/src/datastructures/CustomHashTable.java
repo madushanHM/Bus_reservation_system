@@ -2,25 +2,6 @@ package datastructures;
 
 import java.util.LinkedList;
 
-/**
- * Custom Hash Table (Member 6 Assignment)
- *
- * Hash Function:
- *   index = (key.hashCode() & 0x7fffffff) % capacity
- *   We mask the sign bit so negative hashCodes never produce a negative index.
- *
- * Collision Handling:
- *   Separate Chaining - each bucket in the array is itself a LinkedList of
- *   entries. If two keys hash to the same bucket, they are simply appended
- *   to that bucket's list instead of overwriting each other.
- *
- * Complexity:
- *   Average case: O(1) for insert / search / delete (assuming a good hash
- *                 spread and low load factor)
- *   Worst case:   O(n) if every key collides into the same bucket
- *                 (degenerates into a single linked list)
- *   Space:        O(n) for n stored entries
- */
 public class CustomHashTable<K, V> {
 
     private static class Entry<K, V> {
